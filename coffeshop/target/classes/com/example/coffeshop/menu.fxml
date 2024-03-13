@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="479.0" prefWidth="741.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.coffeshop.MenuController">
+   <children>
+      <VBox alignment="BOTTOM_LEFT" layoutX="47.0" layoutY="48.0" prefHeight="479.0" prefWidth="111.0" style="-fx-background-color: #B5651D;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="201.0" prefWidth="129.0">
+               <children>
+                  <ImageView fitHeight="139.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/logo_repas.jpeg.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="96.0" prefWidth="129.0">
+               <children>
+                  <Label text="Order Now!" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="26.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="101.0" prefWidth="129.0">
+               <children>
+                  <Button  fx:id="AddBtn" onAction= "#handleAddProductButton" alignment="CENTER" mnemonicParsing="false"  prefHeight="31.0" prefWidth="109.0" style="-fx-background-color: #B5651D;" text="Add Product" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="78.0" prefWidth="129.0">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleLogoutButton" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #B5651D;" text="Logout" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="137.0" layoutY="5.0" prefHeight="468.0" prefWidth="362.0" style="-fx-background-color: white; -fx-background-radius: 16; -fx-border-color: black; -fx-border-radius: 16;">
+         <children>
+            <AnchorPane layoutX="3.0" layoutY="3.0" prefHeight="468.0" prefWidth="362.0">
+               <children>
+                  <TableView fx:id="tableView" layoutX="4.0" layoutY="-1.0" onMouseClicked="#handleProductSelection" prefHeight="461.0" prefWidth="356.0" style="-fx-border-color: black;">
+                    <columns>
+                      <TableColumn fx:id="productNameColumn" prefWidth="180.0" text="Product Name" />
+                      <TableColumn fx:id="priceColumn" prefWidth="178.0" text="Price" />
+                    </columns>
+                  </TableView>
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="521.0" layoutY="6.0" prefHeight="468.0" prefWidth="219.0" style="-fx-background-color: white; -fx-border-color: black; -fx-background-radius: 16; -fx-border-radius: 16;">
+         <children>
+            <TableView fx:id="selectedTableView" layoutX="4.0" layoutY="14.0" prefHeight="256.0" prefWidth="217.0" style="-fx-border-color: black;">
+              <columns>
+                <TableColumn fx:id="selectedProductNameColumn" prefWidth="89.0" text="Product Name" />
+                <TableColumn fx:id="selectedQuantityColumn" prefWidth="61.0" text="Quantity" />
+                  <TableColumn fx:id="selectedPriceColumn" prefWidth="61.0" text="Price$" />
+              </columns>
+            </TableView>
+            <Label layoutX="19.0" layoutY="277.0" prefHeight="23.0" prefWidth="52.0" text="Total :">
+               <font>
+                  <Font name="Book Antiqua" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalLabel" layoutX="95.0" layoutY="277.0" prefHeight="23.0" prefWidth="100.0" text="0.0$">
+               <font>
+                  <Font name="Book Antiqua" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="4.0" layoutY="300.0" prefHeight="23.0" prefWidth="82.0" text="Amount :">
+               <font>
+                  <Font name="Book Antiqua" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="amountTextField" layoutX="80.0" layoutY="299.0" prefHeight="25.0" prefWidth="129.0" promptText="0.0$" style="-fx-border-color: #B5651D;" />
+            <Label layoutX="4.0" layoutY="324.0" prefHeight="23.0" prefWidth="73.0" text="Change :">
+               <font>
+                  <Font name="Book Antiqua" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="95.0" layoutY="324.0" prefHeight="23.0" prefWidth="40.0" text="0.0$">
+               <font>
+                  <Font name="Book Antiqua" size="18.0" />
+               </font>
+            </Label>
+            <Button  onAction="#handlePayButton" layoutX="48.0" layoutY="358.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="142.0" style="-fx-background-color: #B5651D;" text="PAY" textFill="WHITE">
+               <font>
+                  <Font name="MS Outlook" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="14.0" layoutY="410.0" mnemonicParsing="false" onAction="#handleRemoveButton" prefHeight="34.0" prefWidth="92.0" style="-fx-background-color: #B5651D;" text="Remove" textFill="WHITE">
+               <font>
+                  <Font name="MS Outlook" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="121.0" layoutY="410.0" mnemonicParsing="false" onAction="#handleViewButton" prefHeight="34.0" prefWidth="92.0" style="-fx-background-color: #B5651D;" text="View" textFill="WHITE">
+               <font>
+                  <Font name="MS Outlook" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

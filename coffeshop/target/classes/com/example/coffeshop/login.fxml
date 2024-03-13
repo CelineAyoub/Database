@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="494.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.coffeshop.LOGC">
+   <children>
+      <VBox layoutX="31.0" layoutY="34.0" prefHeight="400.0" prefWidth="196.0" style="-fx-background-color: #B5651D;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #B5651D;">
+               <children>
+                  <Label text="Welcome" textFill="WHITE">
+                     <font>
+                        <Font name="Cambria Bold" size="33.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="160.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="181.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/pexels-clem-onojeghuo-175711.jpg" />
+                     </image></ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="77.0" prefWidth="117.0" text="CoffeShop" textFill="WHITE">
+                     <font>
+                        <Font name="Cambria Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label layoutX="264.0" layoutY="14.0" prefHeight="30.0" prefWidth="162.0" text="Login Account" textFill="#b5651d">
+         <font>
+            <Font name="Cambria Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="207.0" layoutY="147.0" text="Username :">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="209.0" layoutY="238.0" text="Password:">
+         <font>
+            <Font name="Cambria Bold" size="21.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="passwordField" layoutX="311.0" layoutY="239.0" prefHeight="25.0" prefWidth="162.0" />
+      <TextField fx:id="textField" layoutX="311.0" layoutY="146.0" prefHeight="25.0" prefWidth="162.0" />
+      <Button fx:id="button" layoutX="298.0" layoutY="315.0" mnemonicParsing="false" onAction="#handleLoginButtonAction" prefHeight="36.0" prefWidth="94.0" style="-fx-background-color: #B5651D;" text="Login" textFill="WHITE">
+         <font>
+            <Font name="Constantia Bold" size="17.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="100.0" fitWidth="141.0" layoutX="264.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/coffee-logo-design-for-coffee-shop-icon-with-creative-concept-premium-vector.jpg" />
+         </image>
+      </ImageView>
+
+   </children>
+</AnchorPane>
