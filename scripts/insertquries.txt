@@ -1,0 +1,1 @@
+insert into user(password,name) values(411,'CELINE');

@@ -1,0 +1,12 @@
+create table user(
+password int not null primary key,
+name varchar(30) not null
+
+);CREATE TABLE products (
+    ProductID INT NOT NULL PRIMARY KEY,
+    ProductName VARCHAR(30) NOT NULL,
+    Type VARCHAR(30) NOT NULL,
+    Stock INT NOT NULL,
+    Price FLOAT NOT NULL,
+    DateAdded DATETIME NOT NULL
+);
